@@ -1,6 +1,0 @@
-def main():
-    print("Hello from session-1-2!")
-
-
-if __name__ == "__main__":
-    main()
