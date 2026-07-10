@@ -1,0 +1,29 @@
+Converse
+Service: Amazon Bedrock Runtime
+
+Sends messages to the specified Amazon Bedrock model. Converse provides a consistent interface
+that works with all models that support messages. This allows you to write code once and use it
+with different models. If a model has unique inference parameters, you can also pass those unique
+parameters to the model.
+
+Amazon Bedrock doesn't store any text, images, or documents that you provide as content. The
+data is only used to generate the response.
+
+You can submit a prompt by including it in the messages field, specifying the modelId of a
+foundation model or inference profile to run inference on it, and including any other fields that are
+relevant to your use case.
+
+You can also submit a prompt from Prompt management by specifying the ARN of the
+prompt version and including a map of variables to values in the promptVariables field.
+
+You can append more messages to the prompt by using the messages field. If you use a
+prompt from Prompt management, you can't include the following fields in the request:
+"additionalModelRequestFields", "inferenceConfig", "system", or "toolConfig". Instead, these
+fields must be defined through Prompt management. For more information, see Test a prompt
+using Prompt management.
+
+For information about the Converse API, see Use the Converse API. To use a guardrail, see Use a
+guardrail with the Converse API. To use a tool with a model, see Tool use (Function calling).
+For example code, see Converse API examples.
+
+This operation requires permission for the "bedrock:InvokeModel" action.
